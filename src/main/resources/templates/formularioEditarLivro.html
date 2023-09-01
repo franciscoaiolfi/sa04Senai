@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Livro</title>
+    <style>
+		body {
+			background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2128&q=80');
+			background-size: cover;
+			background-blur: 8px; /* O filtro de desfoque pode variar */
+			color: white;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+		}
+
+		.container {
+			margin-top: 50px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		form {
+			list-style-type: none;
+			padding: 0;
+			background: #38393bc9;
+			width: 500px;
+			display: flex;
+			flex-direction: column;
+			min-height: 350px;
+			border-radius: 10px;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 15px;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+		input{
+			height: 30px;
+		}
+		button{
+			height: 40px;
+			width: 100px;
+			cursor: pointer;
+		}
+		a{
+			text-decoration: none;
+			color: white;
+			font-weight: 600;
+			border: 1px solid white;
+			padding: 10px;
+			border-radius: 12px;
+			background: #854040;
+		}
+	</style>
+</head>
+<body>
+    <h3>Editar Livro</h3>
+   <form th:action="@{/livros/{id}/editar(id=${livro.id})}" method="post">
+        <input type="hidden" th:field="${livro.id}">
+        <label for="nome">Nome do Livro:</label><br>
+        <input type="text" th:field="${livro.nome}"><br>
+        <label for="valor">Valor do Livro:</label><br>
+        <input type="text" th:field="${livro.valor}"><br>
+        <button type="submit">Salvar</button>
+    </form>
+    <br>
+    <a href="/livro">Voltar à Lista de Livros</a>
+</body>
+</html>

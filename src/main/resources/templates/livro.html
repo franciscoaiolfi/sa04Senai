@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="https://thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Lista de Livros</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<style>
+		body {
+			background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2128&q=80');
+			background-size: cover;
+			background-blur: 8px; /* O filtro de desfoque pode variar */
+			color: white;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		.container {
+			margin-top: 50px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			background: #38393bc9;
+			width: 500px;
+			display: flex;
+			flex-direction: column;
+			min-height: 350px;
+			border-radius: 10px;
+			justify-content: flex-start;
+			padding: 15px;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+		.livroNovo{
+			text-decoration: none;
+			color: white;
+			font-weight: 600;
+			border: 1px solid white;
+			padding: 10px;
+			border-radius: 12px;
+			background: #854040;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h3>Livros Cadastrados</h3>
+		<ul>
+			<div>
+				
+			</div>
+			<li th:each="livro : ${livro}" class="d-flex justify-content-between align-items-center">
+				<span th:text="${livro.nome} + ' - ' + ${livro.valor}"></span>
+				<button>
+				<a th:href="@{/livros/{id}/editar(id=${livro.id})}" class="btn btn-warning btn-sm mx-1">Editar</a>
+				</button>
+				<button>
+					
+				<a th:href="@{/livros/{id}/excluir(id=${livro.id})}" class="btn btn-danger btn-sm mx-1"
+					onclick="return confirm('Deseja excluir este livro?')">Excluir</a>
+				</button>
+			</li>
+		</ul>
+		<a href="/livros/novo" class="btn btn-success mt-3 livroNovo">Adicionar Novo Livro</a>
+	</div>
+</body>
+
+</html>
