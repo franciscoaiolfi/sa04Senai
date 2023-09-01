@@ -21,15 +21,16 @@ Alguns links uteis que utlizamos para debugar alguns pontos.
 
 
 ## Demonstração
+-[VIDEO SA04 - CRUD](https://drive.google.com/file/d/1cCM8yLWOmJM-B0crCRHIlCa05TuYOaDC/view?usp=sharing)
+-[VIDEO GITHUB - GIT](https://drive.google.com/file/d/1W8E1q5tCsNTkWIv41UbsH-YqzZt3Mbb0/view?usp=sharing)
 
-Insira um gif ou um link de alguma demonstração
 
 
 ## NOSSOS REPOSITÓRIOS
 
 -[REPOSITORIO SA03 - CRUD USUARIO COMPLETO](https://github.com/isagalvao/SENAI_CRUD)
 
--[REPOSITORIO SA04 - CRUD LIVRO COMPLETO]()
+-[REPOSITORIO SA04 - CRUD LIVRO COMPLETO](https://github.com/franciscoaiolfi/sa04Senai)
 
 ## Stack utilizada
 
